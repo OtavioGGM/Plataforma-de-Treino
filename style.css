@@ -1,0 +1,198 @@
+ :root {  
+        --primary: #cb50e1;
+        --secondary: #d42d2d;  
+        --accent: #e74c3c;  
+        --white: #fae8e7;
+        --dark: #380868;  
+        --success: #2ecc71;  
+        --container: #4f324d;
+        --cinzaclaro: rgb(55, 55, 57);
+        --cinzaescuro: #232323;
+      }  * {  
+    margin: 0;  
+    padding: 0;  
+    box-sizing: border-box;  
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  
+    }  
+      
+    body {  
+        background-color: var(--cinzaescuro); /*fundofundo*/
+        color: var(--white);  /*textogeral*/
+        line-height: 1.6;  
+    }  
+      
+    .container {  
+        max-width: 1200px;  /*containers no geral*/
+        margin: 0 auto;  
+        padding: 20px;  
+    }  
+      
+    header {  
+        background: linear-gradient(135deg, var(--primary), var(--secondary));  
+        color: var(--white);  /*treino gostoso*/
+        padding: 30px 0;  
+        text-align: center;  
+        border-radius: 10px;  
+        margin-bottom: 30px;  
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);  
+    }  
+      
+    h1 {  
+        font-size: 2.5rem;  
+        margin-bottom: 10px;  
+    }  
+      
+    .subtitle {  
+        font-size: 1.2rem;  
+        opacity: 0.9;  
+    }  
+      
+    .card {  
+        background: var(--cinzaclaro);  
+        border-radius: 10px;  
+        padding: 25px;  
+        margin-bottom: 25px;  
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);  
+        transition: transform 0.3s ease;  
+    }  
+      
+    .card:hover {  
+        transform: translateY(-5px);  
+    }  
+      
+    .card-title {  
+        color: var(--white);  
+        border-bottom: 2px solid var(--secondary);  
+        padding-bottom: 10px;  
+        margin-bottom: 20px;  
+        font-size: 1.5rem;  
+    }  
+      
+    .week-days {  
+        display: flex;  
+        flex-wrap: wrap;  
+        gap: 15px;  
+        margin-bottom: 30px;  
+    }  
+      
+    .day-card {  
+        flex: 1;  
+        min-width: 200px;  
+        background: var(--container);  
+        border-radius: 8px;  
+        padding: 20px;  
+        box-shadow: 0 3px 5px rgba(0,0,0,0.1);  
+        cursor: pointer;  
+        transition: all 0.3s ease;  
+    }  
+      
+    .day-card:hover {  
+        transform: scale(1.03);  
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);  
+    }  
+      
+    .day-card.active {  
+        background: linear-gradient(135deg, var(--primary), var(--secondary));    
+        color: var(--white);  
+    }  
+      
+    .day-name {  
+        font-weight: bold;  
+        font-size: 1.2rem;  
+        margin-bottom: 10px;  
+    }  
+      
+    .workout-type {  
+        font-size: 0.9rem;  
+        opacity: 0.8;  
+    }  
+      
+    .exercise-list {  
+        display: none;  
+        margin-top: 20px;  
+    }  
+      
+    .exercise-list.active {  
+        display: block;  
+    }  
+      
+    .exercise-item {
+        padding: 10px 0;
+        border-bottom: 1px solid #eee;
+        display: grid;
+        grid-template-columns: 1fr 80px 30px;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .exercise-name {
+        font-weight: 500;
+    }
+
+    .exercise-sets {
+        color: var(--accent);
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .exercise-check {
+        width: 18px;
+        height: 18px;
+        justify-self: end;
+    }  
+      
+    .nutrition-grid {  
+        display: grid;  
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));  
+        gap: 20px;  
+    }  
+      
+    .nutrition-card {  
+        background: white;  
+        border-radius: 8px;  
+        padding: 20px;  
+        box-shadow: 0 3px 5px rgba(0,0,0,0.1);  
+    }  
+      
+    .nutrition-title {  
+        color: var(--primary);  
+        margin-bottom: 15px;  
+        font-size: 1.3rem;  
+    }  
+      
+    .meal-item {  
+        padding: 8px 0;  
+        border-bottom: 1px dashed #eee;  
+    }  
+      
+    .supplement-table {  
+        width: 100%;  
+        border-collapse: collapse;  
+        margin-top: 15px;  
+    }  
+      
+    .supplement-table th {  
+        background-color: var(--primary);  
+        color: white;  
+        padding: 12px;  
+        text-align: left;  
+    }  
+      
+    .supplement-table td {  
+        padding: 10px 12px;  
+        border-bottom: 1px solid #eee;  
+    }  
+      
+    .supplement-table tr:nth-child(even) {  
+        background-color: #f8f9fa;  
+    }  
+      
+    @media (max-width: 768px) {  
+        .week-days {  
+            flex-direction: column;  
+        }  
+          
+        .nutrition-grid {  
+            grid-template-columns: 1fr;  
+        }  
+    }  

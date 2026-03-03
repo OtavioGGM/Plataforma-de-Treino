@@ -1,0 +1,98 @@
+<!DOCTYPE html>  <html lang="pt-BR">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Plataforma de Treinos</title> 
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+</head>  
+<body>  
+    <div class="container">  
+        <header>  
+            <h1>Protocolo Hipertrofia</h1>  
+        </header>
+        
+        <section class="card">  
+        <h2 class="card-title">SEMANA DE TREINOS</h2>  
+        <p><strong>TREINO: </strong>SEGUNDA, TERÇA, QUINTA E SEXTA</p>
+        <p><strong>DESCANSO: </strong>QUARTA, SÁBADO E DOMINGO</p>
+        <p><strong>DURAÇÃO: </strong>2 HORAS</p> 
+        
+          
+        <div class="week-days"> 
+            <p></p>
+            <div class="day-card" data-day="treinoA">  
+                <div class="day-name">Treino A</div>  
+                <div class="workout-type">PUSH (Peito, Ombros e Tríceps)</div>  
+            </div>  
+            <div class="day-card" data-day="treinoB">  
+                <div class="day-name">Treino B</div>  
+                <div class="workout-type">PULL (Costas e Bíceps)</div>  
+            </div>  
+            <div class="day-card" data-day="treinoC">  
+                <div class="day-name">Treino C</div>  
+                <div class="workout-type">LEGS (Pernas e Abdômen)</div>  
+            </div>  
+            <div class="day-card" data-day="variacaoA">  
+                <div class="day-name">Variação A</div>  
+                <div class="workout-type">PUSH (Variação de Estímulo)</div>  
+            </div>  
+            <div class="day-card" data-day="variacaoB">  
+                <div class="day-name">Variação B</div>  
+                <div class="workout-type">PULL (Variação de Estímulo)</div>  
+            </div>  
+        </div>  
+     
+        <div id="treinoA" class="exercise-list"> 
+            <div class="exercise-item"><span class="exercise-name">Lombar aparelho</span><span class="exercise-sets">3x12</span><input type="checkbox" class="exercise-check"></div>            
+            <div class="exercise-item"><span class="exercise-name">Supino reto barra</span><span class="exercise-sets">4x8</span><input type="checkbox" class="exercise-check"></div>
+            <div class="exercise-item"><span class="exercise-name">Supino inclinado halteres</span><span class="exercise-sets">3x10</span><input type="checkbox" class="exercise-check"></div>
+            <div class="exercise-item"><span class="exercise-name">Desenvolvimento militar</span><span class="exercise-sets">4x8</span><input type="checkbox" class="exercise-check"></div>
+            <div class="exercise-item"><span class="exercise-name">Elevação lateral</span><span class="exercise-sets">3x12</span><input type="checkbox" class="exercise-check"></div>
+            <div class="exercise-item"><span class="exercise-name">Tríceps testa</span><span class="exercise-sets">3x10</span><input type="checkbox" class="exercise-check"></div>
+            <div class="exercise-item"><span class="exercise-name">Tríceps corda</span><span class="exercise-sets">3x12</span><input type="checkbox" class="exercise-check"></div>
+        </div>  
+          
+        <div id="treinoB" class="exercise-list">  
+            <div class="exercise-item"><span class="exercise-name">Barra fixa</span><span class="exercise-sets">4x até a falha</span><input type="checkbox" class="exercise-check"></div>
+            <div class="exercise-item"><span class="exercise-name">Remada curvada barra</span><span class="exercise-sets">4x10</span><input type="checkbox" class="exercise-check"></div>
+            <div class="exercise-item"><span class="exercise-name">Puxada alta</span><span class="exercise-sets">3x10</span><input type="checkbox" class="exercise-check"></div>
+            <div class="exercise-item"><span class="exercise-name">Remada unilateral</span><span class="exercise-sets">3x12</span><input type="checkbox" class="exercise-check"></div>
+            <div class="exercise-item"><span class="exercise-name">Rosca direta barra</span><span class="exercise-sets">3x10</span><input type="checkbox" class="exercise-check"></div>
+            <div class="exercise-item"><span class="exercise-name">Rosca alternada halteres</span><span class="exercise-sets">3x12</span><input type="checkbox" class="exercise-check"></div>
+        </div>  
+          
+        <div id="treinoC" class="exercise-list">  
+            <div class="exercise-item"><span class="exercise-name">Agachamento livre</span><span class="exercise-sets">4x8</span><input type="checkbox" class="exercise-check"></div>
+            <div class="exercise-item"><span class="exercise-name">Leg press</span><span class="exercise-sets">4x12</span><input type="checkbox" class="exercise-check"></div>
+            <div class="exercise-item"><span class="exercise-name">Cadeira extensora</span><span class="exercise-sets">3x15</span><input type="checkbox" class="exercise-check"></div>
+            <div class="exercise-item"><span class="exercise-name">Mesa flexora</span><span class="exercise-sets">3x12</span><input type="checkbox" class="exercise-check"></div>
+            <div class="exercise-item"><span class="exercise-name">Panturrilhas em pé</span><span class="exercise-sets">4x15</span><input type="checkbox" class="exercise-check"></div>
+            <div class="exercise-item"><span class="exercise-name">Abdômen infra + prancha</span><span class="exercise-sets">3 séries cada</span><input type="checkbox" class="exercise-check"></div>
+        </div>  
+          
+        <div id="variacaoA" class="exercise-list">  
+            <div class="exercise-item"><span class="exercise-name">Lombar máquina</span><span class="exercise-sets">3x12</span><input type="checkbox" class="exercise-check"></div>
+            <div class="exercise-item"><span class="exercise-name">Supino inclinado halter</span><span class="exercise-sets">4x8</span><input type="checkbox" class="exercise-check"></div>
+            <div class="exercise-item"><span class="exercise-name">Crucifixo máquina</span><span class="exercise-sets">3x12</span><input type="checkbox" class="exercise-check"></div>
+            <div class="exercise-item"><span class="exercise-name">Desenvolvimento Arnold</span><span class="exercise-sets">3x10</span><input type="checkbox" class="exercise-check"></div>
+            <div class="exercise-item"><span class="exercise-name">Elevação lateral + frontal (bi-set)</span><span class="exercise-sets">3x12</span><input type="checkbox" class="exercise-check"></div>
+            <div class="exercise-item"><span class="exercise-name">Tríceps Banco</span><span class="exercise-sets">3x10</span><input type="checkbox" class="exercise-check"></div>
+            <div class="exercise-item"><span class="exercise-name">Tríceps francês</span><span class="exercise-sets">3x12</span><input type="checkbox" class="exercise-check"></div>
+        </div>  
+          
+        <div id="variacaoB" class="exercise-list">  
+            <div class="exercise-item"><span class="exercise-name">Puxada neutra</span><span class="exercise-sets">4x10</span><input type="checkbox" class="exercise-check"></div>
+            <div class="exercise-item"><span class="exercise-name">Remada baixa</span><span class="exercise-sets">4x12</span><input type="checkbox" class="exercise-check"></div>
+            <div class="exercise-item"><span class="exercise-name">Encolhimento barra</span><span class="exercise-sets">3x15</span><input type="checkbox" class="exercise-check"></div>
+            <div class="exercise-item"><span class="exercise-name">Rosca 21</span><span class="exercise-sets">3 séries</span><input type="checkbox" class="exercise-check"></div>
+            <div class="exercise-item"><span class="exercise-name">Rosca concentrada</span><span class="exercise-sets">3x12</span><input type="checkbox" class="exercise-check"></div>
+            <div class="exercise-item"><span class="exercise-name">Abdômen oblíquo</span><span class="exercise-sets">3x15</span><input type="checkbox" class="exercise-check"></div>
+        </div>  
+    </section>   
+
+<a href="guiaAlimenticio.html">GUIA DE ALIMENTAÇÃO</a>
+
+</body>
+</html>
