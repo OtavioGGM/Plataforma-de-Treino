@@ -1,13 +1,17 @@
  :root {  
-        --primary: #cb50e1;
-        --secondary: #d42d2d;  
-        --accent: #e74c3c;  
-        --white: #fae8e7;
-        --dark: #380868;  
-        --success: #2ecc71;  
-        --container: #4f324d;
-        --cinzaclaro: rgb(55, 55, 57);
+        /*fundo*/
         --cinzaescuro: #232323;
+        --cinzaclaro: rgb(55, 55, 57);
+        /*texto*/
+        --white: #fae8e7;
+        /*cores*/
+        --primary: #cb50e1;
+        --halftone: #f13c81;
+        --secondary: #d42d2d;   
+        /*container*/
+        --corcontainer: #4f324d;
+
+
       }  * {  
     margin: 0;  
     padding: 0;  
@@ -62,7 +66,7 @@
       
     .card-title {  
         color: var(--white);  
-        border-bottom: 2px solid var(--secondary);  
+        border-bottom: 2px solid var(--primary);  
         padding-bottom: 10px;  
         margin-bottom: 20px;  
         font-size: 1.5rem;  
@@ -78,7 +82,7 @@
     .day-card {  
         flex: 1;  
         min-width: 200px;  
-        background: var(--container);  
+        background: var(--corcontainer);  
         border-radius: 8px;  
         padding: 20px;  
         box-shadow: 0 3px 5px rgba(0,0,0,0.1);  
@@ -118,7 +122,7 @@
       
     .exercise-item {
         padding: 10px 0;
-        border-bottom: 1px solid #eee;
+        border-bottom: 1px solid var(--primary);
         display: grid;
         grid-template-columns: 1fr 80px 30px;
         align-items: center;
@@ -130,7 +134,7 @@
     }
 
     .exercise-sets {
-        color: var(--accent);
+        color: var(--halftone);
         font-weight: bold;
         text-align: center;
     }
@@ -141,6 +145,11 @@
         justify-self: end;
     }  
       
+    input[type="checkbox"]:checked {
+         accent-color: var(--primary);
+    }
+
+
     .nutrition-grid {  
         display: grid;  
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));  
@@ -148,7 +157,7 @@
     }  
       
     .nutrition-card {  
-        background: white;  
+        background: var(--cinzaclaro);  
         border-radius: 8px;  
         padding: 20px;  
         box-shadow: 0 3px 5px rgba(0,0,0,0.1);  
@@ -162,7 +171,7 @@
       
     .meal-item {  
         padding: 8px 0;  
-        border-bottom: 1px dashed #eee;  
+        border-bottom: 1px dashed var(--primary);  
     }  
       
     .supplement-table {  
@@ -173,18 +182,18 @@
       
     .supplement-table th {  
         background-color: var(--primary);  
-        color: white;  
+        color: var(--white);  
         padding: 12px;  
         text-align: left;  
     }  
       
     .supplement-table td {  
         padding: 10px 12px;  
-        border-bottom: 1px solid #eee;  
-    }  
-      
+        border-bottom: 1px solid var(--cinzaclaro);  
+    }   
+
     .supplement-table tr:nth-child(even) {  
-        background-color: #f8f9fa;  
+        background-color: var(--corcontainer);  
     }  
       
     @media (max-width: 768px) {  
