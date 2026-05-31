@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     return; // cancelar se clicar em "Cancelar"
                 }
             }
-
+            //Confetes
             try {
                 // Rajada Esquerda
                 confetti({
@@ -57,8 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 console.warn("Sem confetes dessa vez, mas seu treino foi salvo!", erro);
             }
 
-            // CORREÇÃO AQUI: Aumentamos o tempo para 2.5 segundos (2500ms)
-            // Isso dá tempo para os confetes caírem antes do alert() travar a tela
+            //tempo em 2500ms para dar tempo dos confetes caírem antes do alert() travar a tela
             setTimeout(() => {
                 alert("Treino Concluído!");
                 
@@ -66,13 +65,14 @@ document.addEventListener("DOMContentLoaded", () => {
                     checkboxes.forEach(input => {
                         input.checked = false;
                     });
-            }, 2500); 
+            }, 2500); //tempo
         });
     });
 
-    //cronometro
+    //temporizador
     const btnStart = document.getElementById('btn-start');
-    
+    const btnStop = document.getElementById('btn-stop');
+
     // Variável global ao escopo do cronômetro para poder resetá-lo se clicarem duas vezes
     let interval; 
 
@@ -96,8 +96,28 @@ document.addEventListener("DOMContentLoaded", () => {
             // Limpa o intervalo anterior se o usuário clicar em "Iniciar" novamente
             clearInterval(interval); 
             
-            // Inicia o timer
+            if (btnStop) btnStop.disabled = false; // Habilita o botão de parar
             startTimer(duration, display);
+        });
+    }
+
+    //botão de cancelar
+    if (btnStop) {
+        btnStop.addEventListener('click', () => {
+            //para o temporizador imediatamente
+            clearInterval(interval); 
+
+            //pega os inputs e o display para resetar o texto da tela
+            const minutesInput = document.getElementById('minute');
+            const secondsInput = document.getElementById('second');
+            const display = document.getElementById('timer');
+
+            //Formata os valores iniciais dos inputs com zero à esquerda
+            const min = String(minutesInput.value || '0').padStart(2, '0');
+            const sec = String(secondsInput.value || '0').padStart(2, '0');
+
+            //devolve o tempo original digitado para o display
+            display.innerHTML = `${min}:${sec}`;
         });
     }
 
@@ -106,7 +126,6 @@ document.addEventListener("DOMContentLoaded", () => {
         let minutes, seconds;
 
         interval = setInterval(() => {
-            // CORREÇÃO: Removida a variável inexistente 'hours' que quebrava o cálculo
             minutes = Math.floor(timerLeft / 60);
             seconds = Math.floor(timerLeft % 60);
 

@@ -26,7 +26,7 @@
     }  
       
     .container {  
-        max-width: 1200px;  /*espaamento de containers no geral*/
+        max-width: 1200px;  /*espaçamento de containers no geral*/
         margin: 0 auto;  
         padding: 20px;  
     }  
@@ -103,8 +103,12 @@
         margin-bottom: 25px;  
         box-shadow: 0 4px 6px rgba(0,0,0,0.05);  
         transition: transform 0.3s ease; 
-    }  
-     /* 
+        display: flex;
+        justify-content: center; /* Centraliza os botões */
+        gap: 25px;               /* Cria um espaço de 15px entre eles */
+        margin-top: 10px;        /* Afasta os botões dos inputs acima */
+} 
+     /* pode ignorar pois fica melhor sem
     .card:hover {  
         transform: translateY(-5px);  
     }  */
@@ -251,6 +255,95 @@
         }  
     }  
 
+    /* Container que segura as duas caixas (minutos e segundos) */
+    .align-inputs {
+     display: flex;
+     justify-content: center;
+     gap: 30px; /* Espaço entre o bloco de minutos e o de segundos */
+    max-width: 400px; /* Impede que o bloco estique demais na tela */
+    margin: 0 auto 20px auto; /* Centraliza o bloco na página */
+    }
+
+
+        /*botão iniciar (Verde) */
+    #btn-start {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    cursor: pointer;
+    border-radius: 4px;
+    }
+
+    #btn-start:hover {
+    transform:scale(1.1);
+    }
+    
+    /*botão cancelar quando ATIVO (Vermelho) */
+    #btn-stop {
+    background-color: var(--secondary);
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    cursor: pointer;
+    border-radius: 4px;
+    }
+
+    #btn-stop:enabled:hover {
+    transform:scale(1.1);
+    }
+
+    /*botão cancelar quando DESATIVADO (Cinza e sem clique) */
+    #btn-stop:disabled {
+    background-color: var(--corcontainer);
+    color: #666666; /*numero do djabo*/
+    cursor: not-allowed; /* Muda o cursor para um símbolo de bloqueio */
+    opacity: 0.6;
+    }
+
+    .time-display {
+    font-size: 48px;
+    background-color:#4f324d;
+    color: var(--white);
+    padding: 10px 20px;  
+    text-align: center;  
+    border-radius: 10px;  
+    margin-bottom: 30px;  
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .timer-input {
+    display: flex;
+    flex-direction: column; /* Coloca o texto acima do input */
+    align-items: center;
+    background-color: #4f324d;
+    color: var(--white);
+    padding: 15px;  
+    border-radius: 10px;  
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: 100px; /* Largura fixa para não esticar com a página */
+    }
+
+    /* Estilização das caixas de texto de número (os inputs em si) */
+    .timer-input input[type="number"] {
+    background-color: #351f33; /* Tom mais escuro que o roxo do container */
+    color: var(--white);       /* Texto branco */
+    border: 1px solid var(--primary); /* Borda fina com a sua cor primária */
+    border-radius: 5px;
+    padding: 8px;
+    width: 60px;               /* Tamanho controlado para o número */
+    text-align: center;
+    font-size: 18px;
+    margin-top: 8px;           /* Afasta o input da palavra (Minutos/Segundos) */
+    outline: none;             /* Remove a borda preta padrão ao clicar */
+    }
+
+    /* Remove as setinhas padrão do input de número para um visual mais limpo */
+    .timer-input input[type="number"]::-webkit-inner-spin-button,
+    .timer-input input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
 
 .weekdays {
   display: grid;
