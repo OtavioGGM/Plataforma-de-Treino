@@ -4,93 +4,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
     <title>Plataforma de Treinos</title> 
     <link rel="stylesheet" href="style.css">
+    <script src="confetti.js" defer></script>
     <script src="script.js" defer></script>
 
 </head>  
 <body>  
     <div class="container">  
-        <header>  
-            <h1>Treino Gostoso™</h1>  
-        </header>
+        <div class="header"><h1>Treino Gostoso™</h1></div>
+        <!--CALENDARIO PARA MARCAR OS TREINOS-->
         
-        <section class="card">  
-        <h2 class="card-title">SEMANA DE TREINOS</h2>  
-        <p><strong>TREINO: </strong>SEGUNDA, TERÇA, QUINTA E SEXTA</p>
-        <p><strong>DESCANSO: </strong>QUARTA, SÁBADO E DOMINGO</p>
-        <p><strong>DURAÇÃO: </strong>2 HORAS</p> 
+        <section class="card">
+
+            <div class="week-days"> 
+                <p></p>
+                <div class="day-card" data-day="treinoA">  
+                    <div class="day-name">Treino A</div>  
+                    <div class="workout-type">PUSH (Peito, Ombros e Tríceps)</div>  
+                </div>  
+                <div class="day-card" data-day="treinoB">  
+                    <div class="day-name">Treino B</div>  
+                    <div class="workout-type">PULL (Costas e Bíceps)</div>  
+                </div>  
+                <div class="day-card" data-day="treinoC">  
+                    <div class="day-name">Treino C</div>  
+                    <div class="workout-type">LEGS (Pernas e Abdômen)</div>  
+                </div>  
+                <div class="day-card" data-day="variacaoE">  
+                    <div class="day-name">Variação E</div>  
+                    <div class="workout-type">PUSH (Variação de Estímulo)</div>  
+                </div>  
+                <div class="day-card" data-day="variacaod">  
+                    <div class="day-name">Variação D</div>  
+                    <div class="workout-type">PULL (Variação de Estímulo)</div>  
+                </div>  
+            </div>  
         
-        <h2 class="card-title"></h2>  
+            <div id="treinoA" class="exercise-list"> 
+                <div class="exercise-item"><span class="exercise-name">Lombar máquina</span><span class="exercise-sets">3x12</span><input type="checkbox" class="exercise-check"></div>
+                <div class="exercise-item"><span class="exercise-name">Supino reto com barra</span><span class="exercise-sets">4x8</span><input type="checkbox" class="exercise-check"></div>
+                <div class="exercise-item"><span class="exercise-name">Supino inclinado com halteres</span><span class="exercise-sets">3x10</span><input type="checkbox" class="exercise-check"></div>
+                <div class="exercise-item"><span class="exercise-name">Paralelas</span><span class="exercise-sets">3xQF</span><input type="checkbox" class="exercise-check"></div>
+                <div class="exercise-item"><span class="exercise-name">Desenvolvimento Arnold</span><span class="exercise-sets">3x10</span><input type="checkbox" class="exercise-check"></div>
+                <div class="exercise-item"><span class="exercise-name">Elevação lateral</span><span class="exercise-sets">3x12</span><input type="checkbox" class="exercise-check"></div>
+                <div class="exercise-item"><span class="exercise-name">Tríceps testa</span><span class="exercise-sets">3x10</span><input type="checkbox" class="exercise-check"></div>
+                <div class="exercise-item"><span class="exercise-name">Cross over na polia alta</span><span class="exercise-sets">3x12</span><input type="checkbox" class="exercise-check"></div>
+                <div class="botao-finalizar-treino">FINALIZAR TREINO GOSTOSO™</div>
+            </div>
 
-        <div class="week-days"> 
-            <p></p>
-            <div class="day-card" data-day="treinoA">  
-                <div class="day-name">Treino A</div>  
-                <div class="workout-type">PUSH (Peito, Ombros e Tríceps)</div>  
-            </div>  
-            <div class="day-card" data-day="treinoB">  
-                <div class="day-name">Treino B</div>  
-                <div class="workout-type">PULL (Costas e Bíceps)</div>  
-            </div>  
-            <div class="day-card" data-day="treinoC">  
-                <div class="day-name">Treino C</div>  
-                <div class="workout-type">LEGS (Pernas e Abdômen)</div>  
-            </div>  
-            <div class="day-card" data-day="variacaoA">  
-                <div class="day-name">Variação A</div>  
-                <div class="workout-type">PUSH (Variação de Estímulo)</div>  
-            </div>  
-            <div class="day-card" data-day="variacaoB">  
-                <div class="day-name">Variação B</div>  
-                <div class="workout-type">PULL (Variação de Estímulo)</div>  
-            </div>  
-        </div>  
-     
-        <div id="treinoA" class="exercise-list"> 
-            <div class="exercise-item"><span class="exercise-name">Lombar máquina</span><span class="exercise-sets">3x12</span><input type="checkbox" class="exercise-check"></div>
-            <div class="exercise-item"><span class="exercise-name">Supino reto com barra</span><span class="exercise-sets">4x8</span><input type="checkbox" class="exercise-check"></div>
-            <div class="exercise-item"><span class="exercise-name">Supino inclinado com halteres</span><span class="exercise-sets">3x10</span><input type="checkbox" class="exercise-check"></div>
-            <div class="exercise-item"><span class="exercise-name">Paralelas</span><span class="exercise-sets">3xQF</span><input type="checkbox" class="exercise-check"></div>
-            <div class="exercise-item"><span class="exercise-name">Desenvolvimento Arnold</span><span class="exercise-sets">3x10</span><input type="checkbox" class="exercise-check"></div>
-            <div class="exercise-item"><span class="exercise-name">Elevação lateral</span><span class="exercise-sets">3x12</span><input type="checkbox" class="exercise-check"></div>
-            <div class="exercise-item"><span class="exercise-name">Tríceps testa</span><span class="exercise-sets">3x10</span><input type="checkbox" class="exercise-check"></div>
-            <div class="exercise-item"><span class="exercise-name">Cross over na polia alta</span><span class="exercise-sets">3x12</span><input type="checkbox" class="exercise-check"></div>
-        </div>
+            <div id="treinoB" class="exercise-list">  
+                <div class="exercise-item"><span class="exercise-name">Barra fixa pronada</span><span class="exercise-sets">4xFALHA</span><input type="checkbox" class="exercise-check"></div>
+                <div class="exercise-item"><span class="exercise-name">Puxada alta pegada neutra</span><span class="exercise-sets">3x10</span><input type="checkbox" class="exercise-check"></div>
+                <div class="exercise-item"><span class="exercise-name">Remada unilateral com halter</span><span class="exercise-sets">3x12</span><input type="checkbox" class="exercise-check"></div>
+                <div class="exercise-item"><span class="exercise-name">Extensão lombar na máquina</span><span class="exercise-sets">3x15</span><input type="checkbox" class="exercise-check"></div>
+                <div class="exercise-item"><span class="exercise-name">Rosca direta com barra</span><span class="exercise-sets">3x10</span><input type="checkbox" class="exercise-check"></div>
+                <div class="exercise-item"><span class="exercise-name">Rosca martelo</span><span class="exercise-sets">3x12</span><input type="checkbox" class="exercise-check"></div>
+                <div class="exercise-item"><span class="exercise-name">Encolhimento com barra</span><span class="exercise-sets">3x15</span><input type="checkbox" class="exercise-check"></div>
+                <div class="exercise-item"><span class="exercise-name">Flexão de punho</span><span class="exercise-sets">3x12</span><input type="checkbox" class="exercise-check"></div>
+                <div class="botao-finalizar-treino">FINALIZAR TREINO GOSTOSO™</div>
+            </div>
 
-        <div id="treinoB" class="exercise-list">  
-            <div class="exercise-item"><span class="exercise-name">Barra fixa pronada</span><span class="exercise-sets">4xFALHA</span><input type="checkbox" class="exercise-check"></div>
-            <div class="exercise-item"><span class="exercise-name">Puxada alta pegada neutra</span><span class="exercise-sets">3x10</span><input type="checkbox" class="exercise-check"></div>
-            <div class="exercise-item"><span class="exercise-name">Remada unilateral com halter</span><span class="exercise-sets">3x12</span><input type="checkbox" class="exercise-check"></div>
-            <div class="exercise-item"><span class="exercise-name">Extensão lombar na máquina</span><span class="exercise-sets">3x15</span><input type="checkbox" class="exercise-check"></div>
-            <div class="exercise-item"><span class="exercise-name">Rosca direta com barra</span><span class="exercise-sets">3x10</span><input type="checkbox" class="exercise-check"></div>
-            <div class="exercise-item"><span class="exercise-name">Rosca martelo</span><span class="exercise-sets">3x12</span><input type="checkbox" class="exercise-check"></div>
-            <div class="exercise-item"><span class="exercise-name">Encolhimento com barra</span><span class="exercise-sets">3x15</span><input type="checkbox" class="exercise-check"></div>
-            <div class="exercise-item"><span class="exercise-name">Flexão de punho</span><span class="exercise-sets">3x12</span><input type="checkbox" class="exercise-check"></div>
-        </div>
+            <div id="treinoC" class="exercise-list">  
+                <div class="exercise-item"><span class="exercise-name">Agachamento livre</span><span class="exercise-sets">4x8</span><input type="checkbox" class="exercise-check"></div>
+                <div class="exercise-item"><span class="exercise-name">Elevação pélvica</span><span class="exercise-sets">3x10</span><input type="checkbox" class="exercise-check"></div>
+                <div class="exercise-item"><span class="exercise-name">Leg press</span><span class="exercise-sets">3x12</span><input type="checkbox" class="exercise-check"></div>
+                <div class="exercise-item"><span class="exercise-name">Cadeira extensora</span><span class="exercise-sets">3x15</span><input type="checkbox" class="exercise-check"></div>
+                <div class="exercise-item"><span class="exercise-name">Cadeira flexora</span><span class="exercise-sets">3x15</span><input type="checkbox" class="exercise-check"></div>
+                <div class="exercise-item"><span class="exercise-name">Cadeira abdutora</span><span class="exercise-sets">3x15</span><input type="checkbox" class="exercise-check"></div>
+                <div class="exercise-item"><span class="exercise-name">Panturrilha em pé</span><span class="exercise-sets">4x15</span><input type="checkbox" class="exercise-check"></div>
+                <div class="exercise-item"><span class="exercise-name">Prancha abdominal</span><span class="exercise-sets">3 SÉRIES</span><input type="checkbox" class="exercise-check"></div>
+                <div class="botao-finalizar-treino">FINALIZAR TREINO GOSTOSO™</div>
+            </div>
 
-        <div id="treinoC" class="exercise-list">  
-            <div class="exercise-item"><span class="exercise-name">Agachamento livre</span><span class="exercise-sets">4x8</span><input type="checkbox" class="exercise-check"></div>
-            <div class="exercise-item"><span class="exercise-name">Elevação pélvica</span><span class="exercise-sets">3x10</span><input type="checkbox" class="exercise-check"></div>
-            <div class="exercise-item"><span class="exercise-name">Leg press</span><span class="exercise-sets">3x12</span><input type="checkbox" class="exercise-check"></div>
-            <div class="exercise-item"><span class="exercise-name">Cadeira extensora</span><span class="exercise-sets">3x15</span><input type="checkbox" class="exercise-check"></div>
-            <div class="exercise-item"><span class="exercise-name">Cadeira flexora</span><span class="exercise-sets">3x15</span><input type="checkbox" class="exercise-check"></div>
-            <div class="exercise-item"><span class="exercise-name">Cadeira abdutora</span><span class="exercise-sets">3x15</span><input type="checkbox" class="exercise-check"></div>
-            <div class="exercise-item"><span class="exercise-name">Panturrilha em pé</span><span class="exercise-sets">4x15</span><input type="checkbox" class="exercise-check"></div>
-            <div class="exercise-item"><span class="exercise-name">Prancha abdominal</span><span class="exercise-sets">3 SÉRIES</span><input type="checkbox" class="exercise-check"></div>
-        </div>
+            <div id="variacaoA" class="exercise-list">  
+                <div class="exercise-item"><span class="exercise-name">Flexão declinada</span><span class="exercise-sets">3xQF</span><input type="checkbox" class="exercise-check"></div>
+                <div class="exercise-item"><span class="exercise-name">Supino declinado</span><span class="exercise-sets">4x8</span><input type="checkbox" class="exercise-check"></div>
+                <div class="exercise-item"><span class="exercise-name">Supino inclinado com barra</span><span class="exercise-sets">3x10</span><input type="checkbox" class="exercise-check"></div>
+                <div class="exercise-item"><span class="exercise-name">Crucifixo na máquina</span><span class="exercise-sets">3x12</span><input type="checkbox" class="exercise-check"></div>
+                <div class="exercise-item"><span class="exercise-name">Desenvolvimento com halteres</span><span class="exercise-sets">3x10</span><input type="checkbox" class="exercise-check"></div>
+                <div class="exercise-item"><span class="exercise-name">Elevação lateral + frontal (bi-set)</span><span class="exercise-sets">3x12</span><input type="checkbox" class="exercise-check"></div>
+                <div class="exercise-item"><span class="exercise-name">Tríceps banco</span><span class="exercise-sets">3x10</span><input type="checkbox" class="exercise-check"></div>
+                <div class="exercise-item"><span class="exercise-name">Tríceps francês</span><span class="exercise-sets">3x12</span><input type="checkbox" class="exercise-check"></div>
+                <div class="exercise-item"><span class="exercise-name">Abdominal supra</span><span class="exercise-sets">3x12</span><input type="checkbox" class="exercise-check"></div>
+                <div class="botao-finalizar-treino">FINALIZAR TREINO GOSTOSO™</div>
+            </div>
 
-        <div id="variacaoA" class="exercise-list">  
-            <div class="exercise-item"><span class="exercise-name">Flexão declinada</span><span class="exercise-sets">3xQF</span><input type="checkbox" class="exercise-check"></div>
-            <div class="exercise-item"><span class="exercise-name">Supino declinado</span><span class="exercise-sets">4x8</span><input type="checkbox" class="exercise-check"></div>
-            <div class="exercise-item"><span class="exercise-name">Supino inclinado com barra</span><span class="exercise-sets">3x10</span><input type="checkbox" class="exercise-check"></div>
-            <div class="exercise-item"><span class="exercise-name">Crucifixo na máquina</span><span class="exercise-sets">3x12</span><input type="checkbox" class="exercise-check"></div>
-            <div class="exercise-item"><span class="exercise-name">Desenvolvimento com halteres</span><span class="exercise-sets">3x10</span><input type="checkbox" class="exercise-check"></div>
-            <div class="exercise-item"><span class="exercise-name">Elevação lateral + frontal (bi-set)</span><span class="exercise-sets">3x12</span><input type="checkbox" class="exercise-check"></div>
-            <div class="exercise-item"><span class="exercise-name">Tríceps banco</span><span class="exercise-sets">3x10</span><input type="checkbox" class="exercise-check"></div>
-            <div class="exercise-item"><span class="exercise-name">Tríceps francês</span><span class="exercise-sets">3x12</span><input type="checkbox" class="exercise-check"></div>
-            <div class="exercise-item"><span class="exercise-name">Abdominal supra</span><span class="exercise-sets">3x12</span><input type="checkbox" class="exercise-check"></div>
-        </div>
-
-        <div id="variacaoB" class="exercise-list">  
+            <div id="variacaoB" class="exercise-list">  
             <div class="exercise-item"><span class="exercise-name">Barra fixa pegada neutra</span><span class="exercise-sets">4xFALHA</span><input type="checkbox" class="exercise-check"></div>
             <div class="exercise-item"><span class="exercise-name">Remada baixa</span><span class="exercise-sets">4x12</span><input type="checkbox" class="exercise-check"></div>
             <div class="exercise-item"><span class="exercise-name">Puxada alta pegada aberta</span><span class="exercise-sets">3x10</span><input type="checkbox" class="exercise-check"></div>
@@ -99,8 +97,9 @@
             <div class="exercise-item"><span class="exercise-name">Rosca concentrada</span><span class="exercise-sets">3x12</span><input type="checkbox" class="exercise-check"></div>
             <div class="exercise-item"><span class="exercise-name">Panturrilha sentado</span><span class="exercise-sets">4x15</span><input type="checkbox" class="exercise-check"></div>
             <div class="exercise-item"><span class="exercise-name">Abdominal oblíquo</span><span class="exercise-sets">3x15</span><input type="checkbox" class="exercise-check"></div>
-    </div>
-    </section>   
+            <div class="botao-finalizar-treino">FINALIZAR TREINO GOSTOSO™</div>   
+        </div>
+    </section> 
 
 <a href="guiaAlimenticio.html">GUIA DE ALIMENTAÇÃO</a>
 
